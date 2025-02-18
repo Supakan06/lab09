@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             commentsDiv.style.display = "block";
                             event.target.textContent = "ซ่อนความคิดเห็น";
                         })
-                        //จัดการข้อผิดพลาดในการดึงข้อมูล
+                    .catch(error => console.error("Error fetching comments:", error));
                 } else {
                     commentsDiv.style.display = "none";
                     event.target.textContent = "ดูความคิดเห็น";
