@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>เว็บไซต์</strong><br>${user.website}</p>
             <p><strong>ที่อยู่</strong><br>${user.address.street}, ${user.address.suite}<br>${user.address.city}, ${user.address.zipcode}</p>
             <p><strong>บริษัท</strong><br>${user.company.name}<br>${user.company.catchPhrase}</p>
-        `;
+            `;
+            document.getElementById("view-posts").addEventListener("click", () => {
+                window.location.href = `user-posts.html?id=${userId}`;
+            });
         })
 });
