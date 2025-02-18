@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         document.querySelectorAll(".toggle-comments").forEach(button => {
             button.addEventListener("click", (event) => {
-                //ปุ่มเรียกข้อมูลความคิดเห็น
-        });
+                const postId = event.target.dataset.postId;
+            });
 });
 });
 });
