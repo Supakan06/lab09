@@ -1,3 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // โค้ดที่ต้องการให้ทำงานเมื่อหน้า HTML โหลดเสร็จแล้ว
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get("id");  
+    const userDetail = document.getElementById("user-detail");
 });
