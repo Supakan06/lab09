@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         posts.forEach(post => {
             const postElement = document.createElement("div");    
             postElement.classList.add("post");
+            postElement.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <button class="toggle-comments" data-post-id="${post.id}">ดูความคิดเห็น</button>
+                <div class="comments" id="comments-${post.id}" style="display: none;"></div>
+            `;
         });
     })
 })
