@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(posts => {
         posts.forEach(post => {
             const postElement = document.createElement("div");    
+            postElement.classList.add("post");
         });
     })
 })
