@@ -7,5 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(response => response.json()) 
     .then(user => {
         userNameElement.textContent = user.name;
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}/posts`)
+    .then(response => response.json())  
+    .then(posts => {
+        posts.forEach(post => {
+            const postElement = document.createElement("div");    
+        });
     })
+})
 })
