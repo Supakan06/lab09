@@ -26,7 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 const postId = event.target.dataset.postId;
                 const commentsDiv = document.getElementById(`comments-${postId}`);
                 if (commentsDiv.style.display === "none") {
-                    // ดึงความคิดเห็นและแสดง
+                    fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+                        .then(response => response.json())  // แปลงข้อมูลที่ได้เป็น JSON
+                        .then(comments => {
+                            commentsDiv.innerHTML = comments.map(comment => `
+                                <p><strong>${comment.email}</strong></p>
+                                <p>${comment.body}</p>
+                            `).join("");
+                            commentsDiv.style.display = "block";
+                            event.target.textContent = "ซ่อนความคิดเห็น";
+                        })
+                        //จัดการข้อผิดพลาดในการดึงข้อมูล
                 } else {
                     commentsDiv.style.display = "none";
                     event.target.textContent = "ดูความคิดเห็น";
