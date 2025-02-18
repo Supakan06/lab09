@@ -1,0 +1,39 @@
+/* index style */
+body {
+    background-color: #f0f0f09f; 
+    margin: 10px; 
+    font-family: 'Roboto', sans-serif;
+}  
+.user-link {
+    text-decoration: none; 
+    color: inherit;  
+    display: block;  
+}
+.user-card {
+    background: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.user-card:hover {
+    background: #f1f1f1;  
+}
+.user-card h3 {
+    margin: 0;
+    color: #333;
+}
+.user-card p {
+    color: #777;
+}
+.container {
+    display: block; 
+}
+  
+h1 {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
