@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then(response => response.json()) 
     .then(user => {
-        // เเสดงชื่อผู้ใช้
+        userNameElement.textContent = user.name;
     })
 })
