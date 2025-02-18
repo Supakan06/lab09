@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             postsList.appendChild(postElement);
         });
-    })
-})
+        document.querySelectorAll(".toggle-comments").forEach(button => {
+            button.addEventListener("click", (event) => {
+                //ปุ่มเรียกข้อมูลความคิดเห็น
+        });
+});
+});
+});
 })
