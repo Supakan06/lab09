@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <button class="toggle-comments" data-post-id="${post.id}">ดูความคิดเห็น</button>
                 <div class="comments" id="comments-${post.id}" style="display: none;"></div>
             `;
+            postsList.appendChild(postElement);
         });
     })
 })
