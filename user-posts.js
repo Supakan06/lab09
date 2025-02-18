@@ -25,6 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
             button.addEventListener("click", (event) => {
                 const postId = event.target.dataset.postId;
                 const commentsDiv = document.getElementById(`comments-${postId}`);
+                if (commentsDiv.style.display === "none") {
+                    // ดึงความคิดเห็นและแสดง
+                } else {
+                    commentsDiv.style.display = "none";
+                    event.target.textContent = "ดูความคิดเห็น";
+                }
+                
             });
 });
 });
