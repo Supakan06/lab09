@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".toggle-comments").forEach(button => {
             button.addEventListener("click", (event) => {
                 const postId = event.target.dataset.postId;
+                const commentsDiv = document.getElementById(`comments-${postId}`);
             });
 });
 });
