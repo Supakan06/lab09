@@ -18,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.location.href = `user-posts.html?id=${userId}`;
             });
         })
+    .catch(error => console.error("Error fetching user details:", error));  
 });
